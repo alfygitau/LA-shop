@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import logo from "../../assets/shop3.jpg";
 
 const Navbar = () => {
   const state = useSelector((state) => state.cartReducer);
@@ -10,6 +11,7 @@ const Navbar = () => {
       <nav className="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
         <div className="container">
           <Link className="navbar-brand fw-bold fs-4" to="/">
+            <img src={logo} alt="logo" height="100px" width="100px" />
             LA COLLECTION
           </Link>
           <button
@@ -31,7 +33,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link class="nav-link" to="/products">
+                <Link className="nav-link" to="/products">
                   Products
                 </Link>
               </li>

@@ -25,7 +25,7 @@ const Cart = () => {
             <th scope="col">Actions</th>
           </tr>
         </thead>
-        {cart.map((product) => (
+        {cart.length < 1 ? <h1>Cart Empty</h1> : cart.map((product) => (
           <tbody key={product.id}>
             <tr>
               <th scope="row">{product.id}</th>
@@ -52,6 +52,7 @@ const Cart = () => {
           </tbody>
         ))}
       </table>
+      <button className="btn btn-outline-dark">Proceed to checkout</button>
     </div>
   );
 };
